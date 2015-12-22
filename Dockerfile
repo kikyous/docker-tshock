@@ -1,4 +1,4 @@
-FROM alpine:3.1
+FROM alpine:3.2
 
 MAINTAINER kikyous <kikyous@163.com>
 
