@@ -1,13 +1,8 @@
-# Terraria 1.2.4.1
-# Version latest
+FROM alpine:3.1
 
-FROM ubuntu
+MAINTAINER kikyous <kikyous@163.com>
 
-MAINTAINER izissise <morisset.hugues@gmail.com>
-
-RUN apt-get -y update
-
-RUN apt-get -y install wget unzip mono-complete
+RUN apk add --update wget unzip mono && rm -rf /var/cache/apk/*
 
 RUN mkdir tshock && wget "https://github.com/NyxStudios/TShock/releases/download/v4.3.11/tshock_release.zip" -O TShock.zip && unzip TShock.zip -d tshock/
 
