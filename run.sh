@@ -1,4 +1,4 @@
 #!/bin/bash
 
 cd tshock
-mono ./TerrariaServer.exe -configpath "/tshock/config.json"
+mono --server --gc=sgen -O=all TerrariaServer.exe -world test.wld -autocreate 3 -configpath "/tshock/config"
