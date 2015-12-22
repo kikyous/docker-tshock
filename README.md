@@ -5,16 +5,16 @@ help on getting started with docker see the [official getting started guide][0].
 For more information on Terraria and check out it's [website][1].
 You can simply take the image from the official repository with:
 
-    docker.io pull izissise/terraria
+    docker pull izissise/terraria
 
 ## Building docker-terraria
 
 Running this will build you a docker image with the latest version of both
 docker-terraria and TShock itself.
 
-    git clone https://github.com/izissise/docker-terraria
+    git clone https://github.com/kikyous/docker-terraria
     cd docker-terraria
-    docker.io build -t izissise/terraria .
+    docker build -t kikyous/terraria .
 
 
 ## Running docker-terraria
@@ -24,15 +24,15 @@ that you can easily map a proxy to. If this is the only thing running on your
 system you can map the port to 7777 and no proxy is needed. i.e.
 `-p=7777:7777`.
 
-    docker.io run -i -p 7777:7777 --name="terraria" izissise/terraria
+    docker run -i -p 7777:7777 --name="terraria" kikyous/terraria
 
 From now on when you start/stop docker-terraria you should use the container id
 with the following commands. To get your container id, after you initial run
 type `sudo docker.io ps` and it will show up on the left side followed by the
 image name which is `izissise/terraria`.
 
-    docker.io start <container_id>
-    docker.io stop <container_id>
+    docker start <container_id>
+    docker stop <container_id>
 
 ### Notes on the run command
 
