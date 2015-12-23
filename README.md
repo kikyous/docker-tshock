@@ -1,18 +1,18 @@
-# docker-terraria
+# terraria-alpine
 
 A nice and easy way to get a Terraria server up and running using docker and TShock. For
 help on getting started with docker see the [official getting started guide][0].
 For more information on Terraria and check out it's [website][1].
 You can simply take the image from the official repository with:
 
-    docker pull izissise/terraria
+    docker pull kikyous/terraria
 
 ## Building docker-terraria
 
 Running this will build you a docker image with the latest version of both
 docker-terraria and TShock itself.
 
-    git clone https://github.com/kikyous/docker-terraria
+    git clone https://github.com/kikyous/terraria-alpine
     cd docker-terraria
     docker build -t kikyous/terraria .
 
