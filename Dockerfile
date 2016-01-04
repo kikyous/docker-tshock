@@ -1,11 +1,11 @@
-FROM alpine:3.2
+FROM alpine:3.3
 
 MAINTAINER kikyous <kikyous@163.com>
 
-RUN apk add --update wget unzip
-RUN apk add mono --update --repository http://dl-3.alpinelinux.org/alpine/edge/testing/ && rm -rf /var/cache/apk/*
+RUN apk add -U wget unzip
+RUN apk add mono -U --repository http://dl-3.alpinelinux.org/alpine/edge/testing/ && rm -rf /var/cache/apk/*
 
-RUN mkdir tshock && wget "https://github.com/NyxStudios/TShock/releases/download/v4.3.11/tshock_release.zip" --no-check-certificate -O TShock.zip && unzip TShock.zip -d tshock/
+RUN mkdir tshock && wget "https://github.com/NyxStudios/TShock/releases/download/v4.3.12/tshock_4.3.12.zip" --no-check-certificate -O TShock.zip && unzip TShock.zip -d tshock/
 
 RUN rm TShock.zip
 
@@ -14,4 +14,4 @@ RUN chmod 755 run.sh
 
 CMD ["./run.sh"]
 
-EXPOSE 7777
+EXPOSE 7777 7878
